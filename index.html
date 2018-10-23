@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-color: rgb(32, 37, 32);
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    .box{
+        width: 600px;
+        height: 400px;
+        background-color: rgb(156, 154, 154);
+        }
+
+    .box::before{
+        display: block;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: red;
+    }
+    .box img{
+        width: auto;
+        height: 100%;
+    }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <!-- <img src="106914793.jpg" title="images - shadow in the box" /> -->
+    </div>
+</body>
+</html>
