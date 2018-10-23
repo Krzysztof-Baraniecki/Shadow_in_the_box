@@ -6,37 +6,80 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        body{
-            width: 100vw;
-            height: 100vh;
-            background-color: rgb(32, 37, 32);
-            margin: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-    .box{
-        width: 600px;
-        height: 400px;
+    body{
+        width: 100vw;
+        height: 100vh;
         background-color: rgb(156, 154, 154);
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+    .ghost_box{
+        position: absolute;
+        width: 600px;
+        max-width: 600px;
+        height: 400px;
+        max-height: 400px;
+        background-color: rgb(156, 154, 154);
+        /* helper border box */
+        border: 1px dotted rgb(138, 135, 135);;
         }
 
-    .box::before{
+    .ghost_box::before{
+        position: absolute;
         display: block;
         content: '';
         width: 100%;
         height: 100%;
-        background-color: red;
+        background-color: rgb(156, 154, 154, 0.8);
+        background-image: radial-gradient(transparent 0%, rgb(156, 154, 154) 70%);
+        z-index: 1;
     }
-    .box img{
+    .ghost_box img{
+        position: inherit;
         width: auto;
         height: 100%;
     }
+
+    .ghost_box_text{
+        padding: 2rem;
+        position: absolute;
+        z-index: 2;
+        color: #fff;
+    }
+
+    .ghost_box_text h1{
+        text-align: center;
+        margin-bottom:  2rem;
+    }
+    
+    input[type=submit] {
+    display: block;
+    background-color: rgb(33, 61, 187);
+    color: white;
+    width: 200px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 3rem auto;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(44, 77, 226);
+}
     </style>
 </head>
 <body>
-    <div class="box">
-        <!-- <img src="106914793.jpg" title="images - shadow in the box" /> -->
+    <div class="ghost_box">
+        <img src="106914793.jpg" title="images - shadow in the box" />
+        <div class="ghost_box_text">
+            <h1>Lorem ipsum dolor sit amet</h1>
+            <p>Cras vel commodo risus. Cras luctus, arcu nec interdum semper, augue turpis vestibulum tellus, a lacinia metus metus sollicitudin orci. Suspendisse potenti. Morbi vel turpis nec arcu pretium fringilla vitae et urna.</p>
+            <p>Donec semper enim convallis lorem tristique auctor. Donec condimentum ultricies vulputate. Pellentesque mollis convallis imperdiet. Fusce iaculis laoreet euismod.</p>
+                <input type="submit" value="Submit">
+        </div>
     </div>
 </body>
 </html>
